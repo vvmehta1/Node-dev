@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Sample appication using Node by Vishal",
   "scripts": {
+    "prestart" : "babel-node buildScripts/startMessage.js",
+    "start" : "npm-run-all --parallel security-check open:src",
+    "open:src" : "babel-node buildScripts/srcServer.js",
+    "security-check" : "nsp check"
   },
   "author": "Vishal Mehta",
   "license": "VISH",
